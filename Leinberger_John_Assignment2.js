@@ -16,17 +16,17 @@ var distanceHiked = 0;
 //procedure for directional heading
 function directionProcedure(direction){
     
-    if(direction === "North"){
+    if(direction === "north"){
         
-        console.log("To the North the road is pretty empty, you can see anyone or anything coming from miles in either direction.");
+        console.log("To the north the road is pretty empty, you can see anyone or anything coming from miles in either direction.");
     
     }else{
     
-        console.log("To the South you see what appears to be some kind of beast roaming the forest, he doesn't seem to have noticed you.");
+        console.log("To the south you see what appears to be some kind of beast roaming the forest, he doesn't seem to have noticed you.");
     
     }
     
-    console.log("You decide it's in your best interest to continue North, putting more distance between you and the beast.");
+    console.log("You decide it's in your best interest to continue North, putting more distance between you and the beast to the south.");
 
 };
 
@@ -72,7 +72,7 @@ function distanceToGo(distanceHiked) {
     
     var waterCount = 0;
     
-    for(var i=0; i<=distanceHiked; i++){
+    for(var i=1; i<=distanceHiked; i++){
         
         waterCount = waterCount + .5;
         console.log("You will use " + waterCount + " bottles of water for " + i + " miles.");
@@ -84,7 +84,7 @@ function distanceToGo(distanceHiked) {
 //main code
 
 //prompt for procedure
-direction = prompt("What direction would you like to head, North or South?", "Enter North or South");
+direction = prompt("What direction would you like to head, north or south?", "Enter north or south");
 
 //call to directionProcedure function
 directionProcedure(direction);
@@ -101,5 +101,9 @@ newFoodName = foodCreator(cannedMeat, canOfSoup);
 
 //call to distanceToGo function
 waterNeeded = distanceToGo(distanceHiked);
+
+console.log("It is "+ timeToCook +" that you travelled your desired distance today.");
+console.log("You needed " + waterNeeded + " bottles of water to travel this far.");
+console.log("Since it is " + timeToCook + " that it is time to cook, you make a meal out of what you have and you call it \"" + newFoodName + "\" ,and what a delight it was.");
 
 
