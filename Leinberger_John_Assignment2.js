@@ -4,9 +4,10 @@
 //Project 2
 
 //variables
-var canOfSoup;
-var cannedMeat;
+var canOfSoup = "Cream of Mushroom";
+var cannedMeat = "Mystery Meat";
 var waterCount;
+var newFoodName;
 var cookTime;
 var timeToCook = false;
 var singASong = false;
@@ -30,7 +31,8 @@ function directionProcedure(direction){
 //boolean function with two arguments
 function travelDistance(distanceHiked, singASong) {
     
-    while(distanceHiked > 0 && (singASong === true || singASong === false)){
+    //continues the loop for the desired distance to hike
+    while(distanceHiked > 1 && (singASong === true || singASong === false)){
         
         distanceHiked--;
         console.log("You have " + distanceHiked + " miles to go, until you can rest.");
@@ -44,13 +46,22 @@ function travelDistance(distanceHiked, singASong) {
             console.log("Your mind aimlessly wanders about all the different things hiding in the woods...");
             
         }
+        
+        console.log("You've reached the end of the distance you desired to travel today.");
+        
     }
     
     return true;
 };
 
-
-
+//string function, combines the two types of food into a new food name
+function foodCreator(cannedMeat, canOfSoup) {
+    
+    var foodName = canOfSoup+" with "+cannedMeat;
+    
+    return foodName;
+    
+}
 
 //main code
 
@@ -66,3 +77,6 @@ singASong = confirm("Do you want to sing a song while you hike?");
 
 //call to travelDistance function
 timeToCook = travelDistance(distanceHiked, singASong);
+
+//call to foodCreator function
+newFoodName = foodCreator(cannedMeat, canOfSoup);
